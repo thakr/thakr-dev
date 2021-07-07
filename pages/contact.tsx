@@ -33,7 +33,7 @@ export default function Contact() {
     }
   };
   const loadOptions = {
-    loop: false,
+    loop: true,
     autoplay: true,
     animationData: loadingAnimationData,
     rendererSettings: {
