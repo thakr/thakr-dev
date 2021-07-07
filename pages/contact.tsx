@@ -1,14 +1,14 @@
 import React from 'react'
-import Image from 'next/image'
 import { IconBrandGithub, IconMail } from '@tabler/icons';
 import Header from '../components/Header';
-import ButtonPrimary from '../components/ButtonPrimary';
 import { useState } from 'react';
 import axios from 'axios';
+import Head from 'next/head'
 import { motion } from 'framer-motion';
 import Lottie from 'react-lottie'
 import animationData from "../animation/check.json"
 import loadingAnimationData from '../animation/load.json'
+
 export default function Contact() {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
@@ -43,6 +43,9 @@ export default function Contact() {
   console.log(loading)
   return (
     <>
+      <Head>
+        <title>Thakr | Contact</title>
+      </Head>
       <Header />
       <motion.div initial={{opacity: 0}} animate={{opacity: 1}} className="h-screen w-screen flex flex-row sm:flex-col md:flex-col lg:flex-col justify-center gap-36 sm:gap-0 md:gap-0 lg:gap-0 sm:justify-center md:justify-center lg:justify-center items-center">
         <div className="text-center ml-36 md:ml-0 sm:ml-0 lg:ml-0 sm:mt-10 md:mt-10 lg-mt-10">
