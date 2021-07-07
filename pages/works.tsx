@@ -44,8 +44,8 @@ export default function Works() {
             })}
           
           </div>
-          {offset < tiles.length && <button onClick={() => {if (offset < tiles.length) setOffset(offset+1)}} className="absolute top-[43.5%] right-5"><ChevronRightIcon className="w-14 h-14"/></button>}
-          {offset > 0 && <button onClick={() => {if (offset > 0) setOffset(offset-1)}} className="absolute top-[43.5%] left-5"><ChevronLeftIcon className="w-14 h-14" /></button>}
+          {offset < tiles.length && <button onClick={() => {if (offset < tiles.length) setOffset(offset+1)}} className="absolute h-36 w-10 bg-white opacity-60 top-[50%] mt-[-3.3rem] right-5 rounded-lg"><ChevronRightIcon className="w-14 h-36 pr-4"/></button>}
+          {offset > 0 && <button onClick={() => {if (offset > 0) setOffset(offset-1)}} className="absolute h-36 w-10 bg-white opacity-60 top-[50%] mt-[-3.3rem] left-5 rounded-lg"><ChevronLeftIcon className="w-14 h-14 pr-4" /></button>}
           </motion.div>
         
       </div>
