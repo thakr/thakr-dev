@@ -47,10 +47,10 @@ export default function Works() {
           {offset < tiles.length && <button onClick={() => {if (offset < tiles.length) setOffset(offset+1)}} className="absolute h-36 w-10 bg-white opacity-60 top-[50%] mt-[-3.3rem] right-5 rounded-lg"><ChevronRightIcon className="w-14 h-36 pr-4"/></button>}
           {offset > 0 && <button onClick={() => {if (offset > 0) setOffset(offset-1)}} className="absolute h-36 w-10 bg-white opacity-60 top-[50%] mt-[-3.3rem] left-5 rounded-lg"><ChevronLeftIcon className="w-14 h-14 pr-4" /></button>}
           </motion.div>
-        
+
       </div>
       <Link href="/contact" passHref={true}>
-        <motion.div className="flex flex-row justify-center items-center cursor-pointer group absolute bottom-10 left-[50vw] ml-[-6rem]" initial={{opacity: 0, y: 50}} animate={{opacity: 1, y: 0}}>
+        <motion.div className="flex flex-row justify-center items-center cursor-pointer group absolute sm:bottom-5 bottom-10 left-[50vw] ml-[-6rem]" initial={{opacity: 0, y: -50}} animate={{opacity: 1, y: 0}}>
           <h1 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-black to-white z-10">Continue</h1>
           <ChevronRightIcon className="w-14 h-14 mt-3 transform group-hover:translate-x-8 transition ease-in-out duration-200 z-10"/>
         </motion.div>
