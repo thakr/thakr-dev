@@ -19,7 +19,7 @@ export default function Works() {
   }
   
   const tileOffsetHelper = (i: any) => {
-    return (i*(i === 1 ? 357 : (385)))
+    return (i*(i === 1 ? 357 : (375)))
   }
   const tiles = [
     <WorksCard key={1} style={`translateX(-${tileOffsetHelper(offset)}px)`} img="/triviahit.jpg" title="triviahit" desc="“triviahit” is a 1v1 online multiplayer trivia game fit with matchmaking and a ranking system. The frontend was built using React and Tailwind CSS. The backend was built on a Node.js server with express, using Socket.io for real-time data transfer. I also used MongoDB to store user data." srclink="https://github.com/thakr/trivia-app" link="https://triviahit.games"/>,
@@ -34,7 +34,7 @@ export default function Works() {
       <Header />
       <div className="flex items-center justify-center w-screen h-screen">
         <motion.div className="py-20 px-0 flex-shrink-0 max-w-full" variants={container} initial="hidden" animate="show">
-          <div className="flex flex-row flex-shrink-0 overflow-x-hidden overflow-y-hidden">
+          <div className="flex flex-row flex-shrink-0 overflow-x-hidden overflow-y-hidden sm:overflow-x-auto">
             
             <motion.div className="h-auto flex items-center justify-center mb-20 mx-5" animate={offset && {transform: `translateX(-${tileOffsetHelper(offset)}px)`} as any} style={{width: '22rem'}}>
               <h1 className="text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-black to-white ml-5">Works</h1>
@@ -44,8 +44,8 @@ export default function Works() {
             })}
           
           </div>
-          {offset < tiles.length && <button onClick={() => {if (offset < tiles.length) setOffset(offset+1)}} className="absolute h-36 w-10 bg-white opacity-60 top-[50%] mt-[-3.3rem] right-5 rounded-lg"><ChevronRightIcon className="w-14 h-36 pr-4"/></button>}
-          {offset > 0 && <button onClick={() => {if (offset > 0) setOffset(offset-1)}} className="absolute h-36 w-10 bg-white opacity-60 top-[50%] mt-[-3.3rem] left-5 rounded-lg"><ChevronLeftIcon className="w-14 h-14 pr-4" /></button>}
+          {offset < tiles.length && <button onClick={() => {if (offset < tiles.length) setOffset(offset+1)}} className="absolute h-36 w-10 bg-white opacity-60 top-[50%] mt-[-3.3rem] right-5 rounded-lg sm:hidden"><ChevronRightIcon className="w-14 h-36 pr-4"/></button>}
+          {offset > 0 && <button onClick={() => {if (offset > 0) setOffset(offset-1)}} className="absolute h-36 w-10 bg-white opacity-60 top-[50%] mt-[-3.3rem] left-5 rounded-lg sm:hidden"><ChevronLeftIcon className="w-14 h-14 pr-4" /></button>}
           </motion.div>
 
       </div>
