@@ -37,8 +37,8 @@ export default function Workscard({img, title, desc, srclink, link, style} : Pro
     newdesc = newArr.join("") + '...'
   }
   return (
-    <motion.div animate={style && {transform: style}}>
-      <motion.div className="relative mx-5 mb-10 rounded-xl shadow-xl justify-center" style={{backgroundImage: `url(${img})`, backgroundPosition: "center center", backgroundRepeat: "no-repeat", backgroundSize: "1000px", height: "30rem", width: "22rem"}} variants={item}>
+    <motion.div animate={style && {transform: style}} className="py-20">
+      <motion.div className="relative mx-5 rounded-xl shadow-xl justify-center" style={{backgroundImage: `url(${img})`, backgroundPosition: "center center", backgroundRepeat: "no-repeat", backgroundSize: "1000px", height: "30rem", width: "22rem"}} variants={item}>
           <div className="opacity-0 h-full w-full absolute rounded-lg top-0 left-0 bg-white hover:opacity-100 transition duration-150 ease-in-out" >
             <h1 className="text-center text-2xl font-bold my-5">{title}</h1>
             <div className="pt-[1px] bg-gray-300 w-full"></div>
