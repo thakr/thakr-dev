@@ -23,9 +23,10 @@ export default function handler(
     from: '"thakr.dev" <service@thakr.dev>', // sender address (who sends)
     to: 'shaan38t@gmail.com', // list of receivers (who receives)
     subject: `Contact Form Submission`, // Subject line
-    html: `<b>Name: </b>${req.body.name}<br><b>email: </b>${req.body.email} <br><b>Message: </b><p>${req.body.message}</p>` // html body
+    html: `<b>Name: </b>${req.body.name}<br><b>email: </b>${req.body.email}<br><b>IP: </b>${req.headers['x-real-ip']} <br><b>Message: </b><p>${req.body.message}</p>` // html body
 };
   console.log(req.body)
+  console.log()
   transporter.sendMail(mailOptions, function(error : any, info : any){
     if (error) {
       console.log(error);
